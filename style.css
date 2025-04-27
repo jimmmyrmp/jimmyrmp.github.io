@@ -1,0 +1,660 @@
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #050505, #18181d);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  background: rgba(5, 5, 5, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.logo i {
+  font-size: 2rem;
+  color: #FFD700;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  color: #FFD700;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFD700;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(#0d0d0d, #1a1a1d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('ASSETS/download\ \(3\).jpg') center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease forwards;
+}
+
+.hero h2 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #FFD700;
+  text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #FFD700;
+  color: #050505;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e6c200;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Sección Historia */
+.historia {
+  background: linear-gradient(#0d0d0d, #1a1a1d);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.historia-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.historia-content h2 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 3rem;
+  color: #FFD700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5);
+}
+
+.historia-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+/* Timeline Cards */
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.timeline-card {
+  background-color: #1f1f22;
+  border: 1px solid #FFD700;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.3);
+}
+
+.timeline-card h3 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+.timeline-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-card {
+    width: 80%;
+  }
+}
+
+/* Sección Noticias */
+.noticias {
+  background: linear-gradient(#0d0d0d, #1a1a1d);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.noticias-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.noticias-content h2 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 3rem;
+  color: #FFD700;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5);
+}
+
+/* Grid de Noticias */
+.noticias-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.noticia-card {
+  background-color: #1a1a1d;
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  padding: 25px 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+}
+
+.noticia-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.noticia-card .fecha {
+  color: #FFD700;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.noticia-card h3 {
+  font-size: 1.5rem;
+  color: #FFD700;
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.noticia-card p {
+  font-size: 1rem;
+  color: #ccc;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .noticias-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Sección Integrantes + Fondo de Imagen */
+.integrantes-section {
+  padding: 120px 20px;
+  background: linear-gradient(to bottom, #0d0d0d, #18181d);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.integrantes-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.rollingstone.com/wp-content/uploads/2021/08/RS_SilkSonic_Spread_FlorentDechard_2.jpg?w=1600&h=900&crop=1') no-repeat center center/cover;
+  opacity: 0.15; /* Ajusta esto si quieres que sea más o menos visible */
+  z-index: 0;
+}
+
+.section-title {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 3.8rem;
+  color: #FFD700;
+  margin-bottom: 70px;
+  text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.7);
+  position: relative;
+  z-index: 1;
+}
+
+.integrantes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.integrante {
+  background-color: rgba(24, 24, 29, 0.9);
+  border: 3px solid #FFD700;
+  border-radius: 25px;
+  padding: 40px 30px;
+  width: 320px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.integrante:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 25px #FFD700aa;
+}
+
+.integrante-img {
+  width: 220px;
+  height: 220px;
+  border: 5px solid #FFD700;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 25px;
+  transition: all 0.3s ease;
+}
+
+.integrante-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.integrante h3 {
+  font-size: 1.8rem;
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+.integrante p {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Responsive Mejorado */
+@media (max-width: 768px) {
+  .integrantes-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+  }
+
+  .integrante {
+    width: 80%;
+  }
+}
+
+
+/* CALENDARIO */
+
+      .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Esto garantiza que sean 4 columnas al inicio */
+        gap: 30px;
+      }
+
+    .calendar-section {
+      padding: 100px 20px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+  
+    .calendar-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
+  
+    .calendar-section .section-title {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 3rem;
+      color: #FFD700;
+      text-shadow: 2px 2px 6px #FFD70088;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 1;
+    }
+  
+    .calendar-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+    }
+  
+    .calendar-card {
+      background: #111;
+      padding: 25px 20px;
+      border: 2px solid #FFD700;
+      border-radius: 15px;
+      width: 250px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 10px #FFD70055;
+    }
+  
+    .calendar-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #FFD700;
+    }
+  
+    .calendar-card h3 {
+      color: #FFD700;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+  
+    .calendar-card hr {
+      border: 1px solid #FFD70066;
+      margin: 10px 0;
+    }
+  
+    .calendar-card p {
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+  
+    .calendar-card i {
+      color: #FFD700;
+      margin-right: 6px;
+    }
+  
+    @media (max-width: 992px) {
+      .calendar-grid {
+        grid-template-columns: repeat(2, 1fr); /* Aquí ya baja a 2 columnas */
+        gap: 20px;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .calendar-grid {
+        grid-template-columns: 1fr; /* Solo 1 columna */
+        gap: 15px;
+      }
+    }
+    
+    .discografia {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    
+    .discografia h2 {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 3rem;
+      color: #FFD700;
+      text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5);
+      margin-bottom: 50px;
+    }
+    
+    .discografia-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    
+    .album-card {
+      background-color: #18181d;
+      border: 2px solid #FFD700;
+      border-radius: 15px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .album-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .album-card h3 {
+      color: #FFD700;
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+    
+    .album-card p {
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+    
+    .album-card audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    
+    /* Sección Contacto */
+.contacto-section {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #050505, #18181d);
+  text-align: center;
+}
+
+.contacto-section h2 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 3rem;
+  color: #FFD700;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  background: #18181d;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #FFD700;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #FFD700;
+  background: #0d0d0d;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border: 2px solid #FFD700;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-enviar {
+  background-color: #FFD700;
+  color: #050505;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+  background-color: #e6c200;
+}
+
+  /* Footer */
+.footer {
+  background-color: #0d0d0d;
+  border-top: 2px solid #FFD700;
+  padding: 20px 10px;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a i {
+  color: #FFD700;
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover i {
+  color: #e6c200;
+  transform: scale(1.2);
+}
